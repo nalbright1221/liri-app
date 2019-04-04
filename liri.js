@@ -131,13 +131,15 @@ function moviesApi()  {
     if (err) {
       return console.log('Error occurred: ' + err);
     }
-        console.log("=========================================")
-        console.log("Artist: " + data.tracks.items[0].artists[0].name);
-        console.log("Song Title: " + data.tracks.items[0].name);
-        console.log("Preview Url: " + data.tracks.items[0].preview_url);
-        console.log("Album Name: " + data.tracks.items[0].album.name);
-        console.log("=========================================")
-  // console.log(data);
-  });
+
+    for (var i = 0; i < data.tracks.items.length; i++) {
+      console.log("=========================================")
+      console.log("Artist: " + data.tracks.items[i].artists[0].name);
+      console.log("Song Title: " + data.tracks.items[i].name);
+      console.log("Preview Url: " + data.tracks.items[i].preview_url);
+      console.log("Album Name: " + data.tracks.items[i].album.name);
+      console.log("=========================================")
+// console.log(data);
 }
 }
+    )}};
